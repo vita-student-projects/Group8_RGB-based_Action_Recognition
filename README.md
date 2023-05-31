@@ -48,5 +48,7 @@ motion representations."
 
 To change the input from skeleton based to RGB only, we had the implement the dataloader written in dataset.py as said before. With our new preprocessed data, we have to change the neural network implemented in the previous DSTFormer to make it match the new dimensions of the incomming data.
 
+![Contribution scheme](Contribution_schema.png)
+
 ## Results 
 Theoritically, the MotionBert model translated for the NTURGB+D dataset and RGB-based action recognition should work but we never had the opportunity to verify it. Indeed, practically the train.py never compiled correctly and we gave up due to a lack of time. 
