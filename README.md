@@ -20,5 +20,33 @@ Extraction of the dataset:
 - dataset.py returns for each video a 6 dimensions array with: the frame index, x, y, R, G and B. 
 - The label is separately returned 
 
+## Contribution on RGB based Action Recognition:
+
+MotionBERT : https://motionbert.github.io/
+
+We are using the MotionBERT architecture as a reference. Our contribution is to change the data given to the MotionBERT model to use RGB only videos and not Skeleton-based videos which is actually how MotionBERT works. 
+
+Here is the abstract of the MotionBERT paper to get a rough idea of how it works :
+
+"We present a unified perspective on tackling various
+human-centric video tasks by learning human motion representations from large-scale and heterogeneous data resources. Specifically, we propose a pretraining stage in
+which a motion encoder is trained to recover the underlying 3D motion from noisy partial 2D observations. The
+motion representations acquired in this way incorporate
+geometric, kinematic, and physical knowledge about human motion, which can be easily transferred to multiple
+downstream tasks. We implement the motion encoder with
+a Dual-stream Spatio-temporal Transformer (DSTformer)
+neural network. It could capture long-range spatio-temporal
+relationships among the skeletal joints comprehensively and
+adaptively, exemplified by the lowest 3D pose estimation
+error so far when trained from scratch. Furthermore, our
+proposed framework achieves state-of-the-art performance
+on all three downstream tasks by simply finetuning the pretrained motion encoder with a simple regression head (1-2
+layers), which demonstrates the versatility of the learned
+motion representations."
+
+## Idea :
+
+To change the input from skeleton based to RGB only, we had the implement the dataloader written in dataset.py as said before. With our new preprocessed data, we have to change the neural network implemented in the previous DSTFormer to make it match the new dimensions of the incomming data.
+
 ## Results 
 Theoritically, the MotionBert model translated for the NTURGB+D dataset and RGB-based action recognition should work but we never had the opportunity to verify it. Indeed, practically the train.py never compiled correctly and we gave up due to a lack of time. 
