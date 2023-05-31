@@ -16,9 +16,11 @@ The label format:
 
 Extraction of the dataset:
 - dataset.py extracts all the frames from each video. 
-- The frames are extracted with the <em>VideoCapture from OpenCV</em>
+- The frames are extracted with the <em>VideoCapture</em> from OpenCV
 - dataset.py returns for each video a 6 dimensions array with: the frame index, x, y, R, G and B. 
 - The label is separately returned 
+
+More informations are available '[here](https://rose1.ntu.edu.sg/dataset/actionRecognition/).
 
 ## Contribution on RGB based Action Recognition:
 
