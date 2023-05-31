@@ -51,4 +51,4 @@ To change the input from skeleton based to RGB only, we had the implement the da
 ![Contribution scheme](Contribution_schema.png)
 
 ## Results 
-Theoritically, the MotionBert model translated for the NTURGB+D dataset and RGB-based action recognition should work but we never had the opportunity to verify it. Indeed, practically the train.py never compiled correctly and we did not finish due to a lack of time. 
+Theoritically, the MotionBert model translated for the NTURGB+D dataset and RGB-based action recognition should work but we never had the opportunity to verify it. Indeed, practically the train.py never compiled correctly because of incorrect data dimension and we did not finish due to a lack of time. 
