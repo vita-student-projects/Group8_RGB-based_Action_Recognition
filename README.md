@@ -15,4 +15,7 @@ Label Format:
 - For example, if the file name is S001C002P003R002A013, the label are the 3 last digits. Here, it is the action 13 whih corresponds to tearing up paper
 
 Extraction of the dataset:
-- dataset.py extracts all the frames from each video.
+- dataset.py extracts all the frames from each video. 
+- The frames are extracted with the <em>VideoCapture from OpenCV</em>
+- dataset.py returns for each video a 6 dimensions array with: the frame index, x, y, R, G and B. 
+- The label is separately returned 
